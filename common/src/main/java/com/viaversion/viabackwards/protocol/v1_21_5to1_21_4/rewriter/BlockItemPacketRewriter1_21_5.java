@@ -151,7 +151,7 @@ public final class BlockItemPacketRewriter1_21_5 extends BackwardsStructuredItem
             final ProtocolVersion clientVersion = wrapper.user().getProtocolInfo().protocolVersion();
             final boolean isTargetVersion = clientVersion.betweenInclusive(ProtocolVersion.v1_20_5, ProtocolVersion.v1_21_4);
 
-            if (!isTargetVersion || !ViaBackwards.getConfig().isIgnore1_20_5To1_21_4ClickItems()) {
+            if (!isTargetVersion || !ViaBackwards.getConfig().isIgnore1_20_5_1_21_4ClickItems()) {
                 wrapper.passthrough(Types.VAR_INT); // State id
                 wrapper.passthrough(Types.SHORT); // Slot
                 wrapper.passthrough(Types.BYTE); // Button
